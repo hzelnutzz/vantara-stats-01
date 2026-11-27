@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Education — Republic of Vantara | National Statistical Office</title>
+  <meta name="description" content="Literacy, school enrolment and education spending in the Republic of Vantara, 2016 to 2025.">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body data-page="education">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="utility">
+      <div class="wrap utility-inner">
+        <p>Official statistics · Republic of Vantara</p>
+        <p>2026 release · <time datetime="2026-03-27">27 March 2026</time></p>
+      </div>
+    </div>
+    <div class="masthead wrap">
+      <a class="brand" href="index.html" aria-label="Republic of Vantara National Statistical Office — home">
+        <svg class="crest" viewBox="0 0 44 52" aria-hidden="true" focusable="false">
+          <path d="M22 2 42 9v17c0 12-8 20-20 24C10 46 2 38 2 26V9z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 34l7-12 5 6 4-8 8 14z" fill="currentColor" opacity=".9"/>
+          <circle cx="22" cy="14" r="3" fill="currentColor"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-country">Republic of Vantara</span>
+          <span class="brand-office">National Statistical Office</span>
+        </span>
+      </a>
+      <div class="masthead-side">
+        <p class="release-badge"><span>Reference year</span><strong>2025</strong></p>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span>Menu</span>
+        </button>
+      </div>
+    </div>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul class="wrap">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="population.html">Population</a></li>
+        <li><a href="economy.html">Economy</a></li>
+        <li><a href="health.html">Health</a></li>
+        <li><a href="education.html" aria-current="page">Education</a></li>
+        <li><a href="labor.html">Labour</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Literacy and learning</p>
+        <h1>Education</h1>
+        <p class="lede">Adult literacy reached 98.6% in 2025 and youth literacy 99.5%. Net secondary enrolment rose to 88.4%, while gross tertiary enrolment passed two in five young adults, at 41.2%.</p>
+        <p class="page-meta">Reference year 2025 · Source: Vantara National Statistical Office, 2026</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="wrap">
+        <dl class="key-stats">
+          <div><dt>Adult literacy</dt><dd>98.6 <span>%</span></dd></div>
+          <div><dt>Youth literacy</dt><dd>99.5 <span>%</span></dd></div>
+          <div><dt>Primary enrolment</dt><dd>96.8 <span>% net</span></dd></div>
+          <div><dt>Secondary enrolment</dt><dd>88.4 <span>% net</span></dd></div>
+          <div><dt>Tertiary enrolment</dt><dd>41.2 <span>% gross</span></dd></div>
+          <div><dt>Education spending</dt><dd>4.9 <span>% of GDP</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Time series</p>
+              <h2>Literacy and enrolment, 2016–2025</h2>
+            </div>
+            <p class="panel-note">Adult literacy is the share of people aged 15 and over; enrolment rates are per cent of the relevant age group.</p>
+          </div>
+          <div class="chart" id="education-trend"></div>
+          <p class="source-note">Source: Vantara National Statistical Office, 2026; Ministry of Education administrative records and the Labour Force Survey.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Indicators</p>
+              <h2>Education indicators, 2016 and 2025</h2>
+            </div>
+            <p class="panel-note">Changes are in the indicator's own unit. Green marks an improvement.</p>
+          </div>
+          <div class="table-scroll">
+            <table class="data-table">
+              <caption class="sr-only">Education indicators for the Republic of Vantara in 2016 and 2025, with change</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Indicator</th>
+                  <th scope="col">Unit</th>
+                  <th scope="col" class="num">2016</th>
+                  <th scope="col" class="num">2025</th>
+                  <th scope="col" class="num">Change</th>
+                </tr>
+              </thead>
+              <tbody id="education-rows"></tbody>
+            </table>
+          </div>
+          <p class="source-note">Source: Vantara National Statistical Office, 2026. Gross tertiary enrolment can exceed 100% because it counts all students regardless of age.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split-grid">
+        <article class="panel prose-panel">
+          <p class="eyebrow">Enrolment</p>
+          <h2>Secondary schooling closes the gap</h2>
+          <p>Net primary enrolment rose from 93.1% to 96.8% between 2016 and 2025. The larger gain came at secondary level, where the net rate rose from 79.8% to 88.4%, helped by a school-building programme and cash transfers for low-income households.</p>
+          <p>Gross tertiary enrolment rose from 31.5% to 41.2%. Most of the increase is in three-year professional and technical programmes rather than academic degrees.</p>
+        </article>
+        <article class="panel prose-panel">
+          <p class="eyebrow">Resources</p>
+          <h2>More teachers, longer schooling</h2>
+          <p>The pupil–teacher ratio in primary schools fell from 17.6 to 14.2 pupils per teacher. Public spending on education rose from 4.4% to 4.9% of GDP, or about $33.7 billion at 2025 prices.</p>
+          <p>Adults aged 25 and over now have 10.8 years of schooling on average, up from 9.7 in 2016. Youth literacy is 0.9 percentage points above the adult rate, reflecting the expansion of upper secondary education since the 1990s.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="footer-title">Republic of Vantara</p>
+        <p class="footer-sub">National Statistical Office</p>
+        <p class="footer-note">Independent official statistics for the Republic of Vantara. Figures in this release are estimates for 2025, published in 2026.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="population.html">Population</a></li>
+          <li><a href="economy.html">Economy</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="labor.html">Labour</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2>About the data</h2>
+        <ul>
+          <li><a href="about.html#methodology">Methodology</a></li>
+          <li><a href="about.html#sources">Sources</a></li>
+          <li><a href="about.html#definitions">Definitions</a></li>
+          <li><a href="about.html#releases">Release calendar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© <span id="footer-year">2026</span> Republic of Vantara National Statistical Office.</p>
+      <p>Source: Vantara National Statistical Office, 2026. Figures are rounded; totals may not sum.</p>
+    </div>
+  </footer>
+</body>
+</html>

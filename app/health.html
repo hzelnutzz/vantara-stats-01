@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Health — Republic of Vantara | National Statistical Office</title>
+  <meta name="description" content="Life expectancy, mortality, health spending and health-system indicators for the Republic of Vantara, 2016 to 2025.">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body data-page="health">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="utility">
+      <div class="wrap utility-inner">
+        <p>Official statistics · Republic of Vantara</p>
+        <p>2026 release · <time datetime="2026-03-27">27 March 2026</time></p>
+      </div>
+    </div>
+    <div class="masthead wrap">
+      <a class="brand" href="index.html" aria-label="Republic of Vantara National Statistical Office — home">
+        <svg class="crest" viewBox="0 0 44 52" aria-hidden="true" focusable="false">
+          <path d="M22 2 42 9v17c0 12-8 20-20 24C10 46 2 38 2 26V9z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 34l7-12 5 6 4-8 8 14z" fill="currentColor" opacity=".9"/>
+          <circle cx="22" cy="14" r="3" fill="currentColor"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-country">Republic of Vantara</span>
+          <span class="brand-office">National Statistical Office</span>
+        </span>
+      </a>
+      <div class="masthead-side">
+        <p class="release-badge"><span>Reference year</span><strong>2025</strong></p>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span>Menu</span>
+        </button>
+      </div>
+    </div>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul class="wrap">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="population.html">Population</a></li>
+        <li><a href="economy.html">Economy</a></li>
+        <li><a href="health.html" aria-current="page">Health</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="labor.html">Labour</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Health and mortality</p>
+        <h1>Health</h1>
+        <p class="lede">Life expectancy at birth reached 76.4 years in 2025, 0.5 years more than in 2024 and 3.0 years more than in 2016. Infant mortality fell to 10.8 deaths per 1,000 live births.</p>
+        <p class="page-meta">Reference year 2025 · Source: Vantara National Statistical Office, 2026</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="wrap">
+        <dl class="key-stats">
+          <div><dt>Life expectancy</dt><dd>76.4 <span>years</span></dd></div>
+          <div><dt>Men</dt><dd>73.5 <span>years</span></dd></div>
+          <div><dt>Women</dt><dd>79.1 <span>years</span></dd></div>
+          <div><dt>Infant mortality</dt><dd>10.8 <span>per 1,000</span></dd></div>
+          <div><dt>Physicians</dt><dd>3.4 <span>per 1,000</span></dd></div>
+          <div><dt>Health spending</dt><dd>7.8 <span>% of GDP</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Time series</p>
+              <h2>Life expectancy at birth, 2016–2025</h2>
+            </div>
+            <p class="panel-note">Years of life expected at birth, both sexes combined.</p>
+          </div>
+          <div class="chart" id="life-expectancy-trend"></div>
+          <p class="source-note">Source: Vantara National Statistical Office, 2026. The 2020 fall reflects excess mortality during the pandemic.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Indicators</p>
+              <h2>Health indicators, 2016 and 2025</h2>
+            </div>
+            <p class="panel-note">Changes are in the indicator's own unit. Green marks an improvement; red marks a move in the wrong direction.</p>
+          </div>
+          <div class="table-scroll">
+            <table class="data-table">
+              <caption class="sr-only">Health indicators for the Republic of Vantara in 2016 and 2025, with change</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Indicator</th>
+                  <th scope="col">Unit</th>
+                  <th scope="col" class="num">2016</th>
+                  <th scope="col" class="num">2025</th>
+                  <th scope="col" class="num">Change</th>
+                </tr>
+              </thead>
+              <tbody id="health-rows"></tbody>
+            </table>
+          </div>
+          <p class="source-note">Source: Vantara National Statistical Office, 2026; Ministry of Health administrative records. Maternal mortality is per 100,000 live births.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split-grid">
+        <article class="panel prose-panel">
+          <p class="eyebrow">Mortality</p>
+          <h2>Gains concentrated at older ages</h2>
+          <p>Life expectancy rose 3.0 years between 2016 and 2025. Most of the gain comes from lower mortality from circulatory disease and road injuries among people aged 50 and over. The gap between women and men narrowed slightly, from 5.1 years in 2016 to 5.6 years in 2025, as male mortality fell faster.</p>
+          <p>Infant mortality fell from 16.9 to 10.8 per 1,000 live births, and under-five mortality from 20.4 to 13.1. Maternal mortality nearly halved, from 31 to 18 deaths per 100,000 live births.</p>
+        </article>
+        <article class="panel prose-panel">
+          <p class="eyebrow">Health system</p>
+          <h2>More staff, wider access</h2>
+          <p>Vantara had 3.4 physicians and 3.9 hospital beds per 1,000 people in 2025, up from 2.7 and 3.5 in 2016. Health spending reached 7.8% of GDP, or about $53.6 billion at current prices.</p>
+          <p>DTP3 immunisation covered 94% of one-year-olds, and 96.2% of the population used safely managed drinking water. Rural access improved fastest, although it remains below the national average.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="footer-title">Republic of Vantara</p>
+        <p class="footer-sub">National Statistical Office</p>
+        <p class="footer-note">Independent official statistics for the Republic of Vantara. Figures in this release are estimates for 2025, published in 2026.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="population.html">Population</a></li>
+          <li><a href="economy.html">Economy</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="labor.html">Labour</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2>About the data</h2>
+        <ul>
+          <li><a href="about.html#methodology">Methodology</a></li>
+          <li><a href="about.html#sources">Sources</a></li>
+          <li><a href="about.html#definitions">Definitions</a></li>
+          <li><a href="about.html#releases">Release calendar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© <span id="footer-year">2026</span> Republic of Vantara National Statistical Office.</p>
+      <p>Source: Vantara National Statistical Office, 2026. Figures are rounded; totals may not sum.</p>
+    </div>
+  </footer>
+</body>
+</html>

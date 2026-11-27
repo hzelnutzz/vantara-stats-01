@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Economy — Republic of Vantara | National Statistical Office</title>
+  <meta name="description" content="Gross domestic product, growth, inflation and sector shares for the Republic of Vantara, 2016 to 2025.">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body data-page="economy">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="utility">
+      <div class="wrap utility-inner">
+        <p>Official statistics · Republic of Vantara</p>
+        <p>2026 release · <time datetime="2026-03-27">27 March 2026</time></p>
+      </div>
+    </div>
+    <div class="masthead wrap">
+      <a class="brand" href="index.html" aria-label="Republic of Vantara National Statistical Office — home">
+        <svg class="crest" viewBox="0 0 44 52" aria-hidden="true" focusable="false">
+          <path d="M22 2 42 9v17c0 12-8 20-20 24C10 46 2 38 2 26V9z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 34l7-12 5 6 4-8 8 14z" fill="currentColor" opacity=".9"/>
+          <circle cx="22" cy="14" r="3" fill="currentColor"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-country">Republic of Vantara</span>
+          <span class="brand-office">National Statistical Office</span>
+        </span>
+      </a>
+      <div class="masthead-side">
+        <p class="release-badge"><span>Reference year</span><strong>2025</strong></p>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span>Menu</span>
+        </button>
+      </div>
+    </div>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul class="wrap">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="population.html">Population</a></li>
+        <li><a href="economy.html" aria-current="page">Economy</a></li>
+        <li><a href="health.html">Health</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="labor.html">Labour</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">National accounts and prices</p>
+        <h1>Economy</h1>
+        <p class="lede">Vantara's economy grew 2.8% in real terms in 2025, to a nominal gross domestic product of $687.4 billion. Services produced 61.1% of output and consumer inflation averaged 2.4%.</p>
+        <p class="page-meta">Reference year 2025 · Source: Vantara National Statistical Office, 2026</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="wrap">
+        <dl class="key-stats">
+          <div><dt>Nominal GDP</dt><dd>$687.4 <span>billion</span></dd></div>
+          <div><dt>Real growth</dt><dd>+2.8 <span>%</span></dd></div>
+          <div><dt>GDP per capita</dt><dd>$20,099</dd></div>
+          <div><dt>Consumer inflation</dt><dd>2.4 <span>%</span></dd></div>
+          <div><dt>Government debt</dt><dd>51.8 <span>% of GDP</span></dd></div>
+          <div><dt>Exports</dt><dd>32.3 <span>% of GDP</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">National accounts</p>
+              <h2>GDP and sector shares</h2>
+            </div>
+            <div class="control">
+              <label for="economy-year">Reference year</label>
+              <select id="economy-year"></select>
+            </div>
+          </div>
+
+          <div class="selected-grid" aria-live="polite">
+            <div>
+              <span class="selected-label">Nominal GDP</span>
+              <strong class="selected-value" id="selected-gdp">$687.4B</strong>
+            </div>
+            <div>
+              <span class="selected-label">Real growth</span>
+              <strong class="selected-value" id="selected-growth">+2.8%</strong>
+            </div>
+            <div>
+              <span class="selected-label">GDP per capita</span>
+              <strong class="selected-value" id="selected-capita">$20,099</strong>
+            </div>
+          </div>
+
+          <h3 class="chart-title">Nominal GDP, 2016–2025 <span>US$ billions; the selected year is marked</span></h3>
+          <div class="chart" id="gdp-trend"></div>
+
+          <h3 class="chart-title">Share of GDP by sector, <span data-selected-year>2025</span> <span>per cent of GDP</span></h3>
+          <div class="chart" id="sector-chart"></div>
+
+          <p class="source-note">Source: Vantara National Statistical Office, 2026. Sector shares include net taxes on products, so they sum to 100%. Growth is chain-linked at constant prices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Time series</p>
+              <h2>GDP by year</h2>
+            </div>
+            <p class="panel-note">Selecting a reference year above highlights its row in the table.</p>
+          </div>
+          <div class="table-scroll">
+            <table class="data-table">
+              <caption class="sr-only">Gross domestic product, real growth, GDP per capita and inflation, 2016 to 2025</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Year</th>
+                  <th scope="col" class="num">Nominal GDP (US$ bn)</th>
+                  <th scope="col" class="num">Real growth (%)</th>
+                  <th scope="col" class="num">GDP per capita (US$)</th>
+                  <th scope="col" class="num">Inflation (%)</th>
+                </tr>
+              </thead>
+              <tbody id="gdp-rows"></tbody>
+            </table>
+          </div>
+          <p class="source-note">Source: Vantara National Statistical Office, 2026. Nominal GDP is at current prices; GDP per capita divides nominal GDP by the population at 31 December.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split-grid">
+        <article class="panel prose-panel">
+          <p class="eyebrow">Composition</p>
+          <h2>Services take a larger share</h2>
+          <p>Services produced 61.1% of GDP in 2025, up from 57.0% in 2016. Wholesale and retail trade, transport, business services and tourism account for most of the increase. Industry fell from 30.2% to 27.8% over the same period, and agriculture from 8.1% to 6.4%.</p>
+          <p>Net taxes on products contributed 4.7% of GDP. In cash terms, services were worth about $420 billion of the $687.4 billion total.</p>
+        </article>
+        <article class="panel prose-panel">
+          <p class="eyebrow">Prices and public finances</p>
+          <h2>Inflation settled near its target</h2>
+          <p>Consumer prices rose 2.4% on average in 2025, well below the 7.8% recorded in 2022. Food price inflation slowed to 3.1% and energy prices were 0.8% lower than a year earlier. Core inflation, which excludes food and energy, was 2.1%.</p>
+          <p>General government gross debt stood at 51.8% of GDP, or about $356 billion. Exports of goods and services were 32.3% of GDP and imports 29.1%, leaving a trade surplus of 3.2% of GDP.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="footer-title">Republic of Vantara</p>
+        <p class="footer-sub">National Statistical Office</p>
+        <p class="footer-note">Independent official statistics for the Republic of Vantara. Figures in this release are estimates for 2025, published in 2026.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="population.html">Population</a></li>
+          <li><a href="economy.html">Economy</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="labor.html">Labour</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2>About the data</h2>
+        <ul>
+          <li><a href="about.html#methodology">Methodology</a></li>
+          <li><a href="about.html#sources">Sources</a></li>
+          <li><a href="about.html#definitions">Definitions</a></li>
+          <li><a href="about.html#releases">Release calendar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© <span id="footer-year">2026</span> Republic of Vantara National Statistical Office.</p>
+      <p>Source: Vantara National Statistical Office, 2026. Figures are rounded; totals may not sum.</p>
+    </div>
+  </footer>
+</body>
+</html>

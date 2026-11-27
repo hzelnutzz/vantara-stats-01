@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Labour — Republic of Vantara | National Statistical Office</title>
+  <meta name="description" content="Unemployment, youth unemployment, participation and employment in the Republic of Vantara, 2016 to 2025, with a sortable table.">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body data-page="labor">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="utility">
+      <div class="wrap utility-inner">
+        <p>Official statistics · Republic of Vantara</p>
+        <p>2026 release · <time datetime="2026-03-27">27 March 2026</time></p>
+      </div>
+    </div>
+    <div class="masthead wrap">
+      <a class="brand" href="index.html" aria-label="Republic of Vantara National Statistical Office — home">
+        <svg class="crest" viewBox="0 0 44 52" aria-hidden="true" focusable="false">
+          <path d="M22 2 42 9v17c0 12-8 20-20 24C10 46 2 38 2 26V9z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 34l7-12 5 6 4-8 8 14z" fill="currentColor" opacity=".9"/>
+          <circle cx="22" cy="14" r="3" fill="currentColor"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-country">Republic of Vantara</span>
+          <span class="brand-office">National Statistical Office</span>
+        </span>
+      </a>
+      <div class="masthead-side">
+        <p class="release-badge"><span>Reference year</span><strong>2025</strong></p>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span>Menu</span>
+        </button>
+      </div>
+    </div>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul class="wrap">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="population.html">Population</a></li>
+        <li><a href="economy.html">Economy</a></li>
+        <li><a href="health.html">Health</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="labor.html" aria-current="page">Labour</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Work and unemployment</p>
+        <h1>Labour</h1>
+        <p class="lede">Unemployment averaged 6.2% in 2025, the lowest rate in the ten-year series. The labour force reached 14.38 million people, of whom 13.49 million were employed and 892,000 were looking for work.</p>
+        <p class="page-meta">Reference year 2025 · Source: Vantara National Statistical Office, 2026</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="wrap">
+        <dl class="key-stats">
+          <div><dt>Unemployment</dt><dd>6.2 <span>%</span></dd></div>
+          <div><dt>Youth unemployment</dt><dd>14.6 <span>%</span></dd></div>
+          <div><dt>Participation</dt><dd>63.4 <span>%</span></dd></div>
+          <div><dt>Labour force</dt><dd>14.38 <span>million</span></dd></div>
+          <div><dt>Employed</dt><dd>13.49 <span>million</span></dd></div>
+          <div><dt>Working-age population</dt><dd>22.68 <span>million</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Time series</p>
+              <h2>Unemployment rate, 2016–2025</h2>
+            </div>
+            <p class="panel-note">Annual average, per cent of the labour force aged 15 and over.</p>
+          </div>
+          <div class="chart" id="unemployment-trend"></div>
+          <p class="source-note">Source: Vantara National Statistical Office, 2026. Annual averages of the quarterly Labour Force Survey; not seasonally adjusted.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Annual data</p>
+              <h2>Labour market, 2016–2025</h2>
+            </div>
+            <p class="panel-note">Rates are annual averages. The 2025 row is highlighted.</p>
+          </div>
+
+          <div class="table-toolbar">
+            <button class="sort-button" id="labor-sort" type="button" aria-pressed="false">Sort by unemployment</button>
+            <p class="sort-status" id="labor-sort-status" role="status" aria-live="polite">Table sorted by year, newest first.</p>
+          </div>
+
+          <div class="table-scroll">
+            <table class="data-table">
+              <caption class="sr-only">Unemployment, youth unemployment, participation, labour force and employment in the Republic of Vantara, 2016 to 2025</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Year</th>
+                  <th scope="col" class="num">Unemployment (%)</th>
+                  <th scope="col" class="num">Youth unemployment (%)</th>
+                  <th scope="col" class="num">Participation (%)</th>
+                  <th scope="col" class="num">Labour force (million)</th>
+                  <th scope="col" class="num">Employed (million)</th>
+                </tr>
+              </thead>
+              <tbody id="labor-rows"></tbody>
+            </table>
+          </div>
+          <p class="source-note">Source: Vantara National Statistical Office, 2026. Youth unemployment covers people aged 15–24. Employment is derived from the labour force and the unemployment rate, so figures may not sum exactly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split-grid">
+        <article class="panel prose-panel">
+          <p class="eyebrow">The 2025 labour market</p>
+          <h2>Recovery is broad but youth lag</h2>
+          <p>Unemployment fell for a fourth consecutive year, from 9.4% in 2020 to 6.2% in 2025. Employment reached 13.49 million, 190,000 more than in 2024. Participation edged up to 63.4% of the working-age population, close to its pre-pandemic level.</p>
+          <p>Youth unemployment fell to 14.6% from a peak of 21.8% in 2020, but it remains 2.4 times the rate for all workers. Long-term unemployment, defined as job search lasting 12 months or more, accounted for 31% of total unemployment, down from 38% in 2021.</p>
+        </article>
+        <article class="panel prose-panel">
+          <p class="eyebrow">About the survey</p>
+          <h2>How unemployment is measured</h2>
+          <p>The Labour Force Survey interviews about 4,800 households every quarter across the six statistical regions. Unemployment follows the International Labour Organization definition: people without work, available to start within two weeks, and actively seeking work in the previous four weeks.</p>
+          <p>Annual figures are averages of the four quarterly estimates and are not seasonally adjusted. The survey covers people aged 15 and over living in private households; people in institutions and collective dwellings are excluded.</p>
+          <a class="text-link" href="about.html#definitions">Definitions and standards <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="footer-title">Republic of Vantara</p>
+        <p class="footer-sub">National Statistical Office</p>
+        <p class="footer-note">Independent official statistics for the Republic of Vantara. Figures in this release are estimates for 2025, published in 2026.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="population.html">Population</a></li>
+          <li><a href="economy.html">Economy</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="labor.html">Labour</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2>About the data</h2>
+        <ul>
+          <li><a href="about.html#methodology">Methodology</a></li>
+          <li><a href="about.html#sources">Sources</a></li>
+          <li><a href="about.html#definitions">Definitions</a></li>
+          <li><a href="about.html#releases">Release calendar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© <span id="footer-year">2026</span> Republic of Vantara National Statistical Office.</p>
+      <p>Source: Vantara National Statistical Office, 2026. Figures are rounded; totals may not sum.</p>
+    </div>
+  </footer>
+</body>
+</html>
